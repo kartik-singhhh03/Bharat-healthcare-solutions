@@ -1,0 +1,123 @@
+ /* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin:0;
+    padding: 0;
+    background: linear-gradient(to bottom, white, lightpurple);
+    color: #333;
+}
+
+/* Header Section */
+header {
+    background-color: #87ceeb; /* Indigo */
+    color: #87ceeb;
+    padding: 10px 20px;
+    display:flex ;
+    justify-content: space-between;
+    align-items:   center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #FFD700; /* Gold */
+}
+
+/* Section Styling */
+section {
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: rgba(240, 240, 255, 0.8); /* Soft white with opacity */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #87ceeb; /* Indigo */
+    color: white;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Form Styling */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #87ceeb; /* Indigo */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color:#87ceeb; /* Lighter Indigo */
+}
+
+/* Links */
+a {
+    color:#87ceeb;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+}

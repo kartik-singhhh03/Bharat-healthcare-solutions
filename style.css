@@ -85,7 +85,7 @@
   /* Section Styles */
   .section {
     padding: 60px 0;
-    background-color: #ff;
+    background-color: #fff;
   }
   
   .section .container {
@@ -150,13 +150,28 @@
   }
   
   /* Technician Profile */
+  /* Profile Section Styling */
+#technician-profile {
+  padding: 50px 0;
+  background-color: #f4f4f4;
+}
   .profile-card {
     background-color: #f4f4f4;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
+    width: 250px;
+    margin: 0 auto;
   }
+  /* Profile Picture Styling */
+.profile-pic {
+  width: 100px; /* Set the size of the profile picture */
+  height: 100px;
+  border-radius: 50%; /* Make it circular */
+  object-fit: cover; /* Ensure the image covers the area */
+  margin-bottom: 20px; /* Space between the image and name */
+}
   
   .profile-card h3 {
     font-size: 28px;

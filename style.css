@@ -194,3 +194,65 @@
   footer p {
     font-size: 14px;
   }
+/* Logo and Navbar Styling */
+.navbar {
+  background-color: #2a3d4e; /* Dark blue background */
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 80px; /* Increased size of the logo */
+  height: 80px; /* Increased size of the logo */
+  margin-right: 10px; /* Space between logo and text */
+}
+
+.logo-text {
+  font-size: 1.8em;
+  color: white;
+  font-weight: bold;
+}
+
+.navbar ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+}
+
+.navbar ul li {
+  margin-left: 20px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #f39c12; /* Hover effect color */
+}
+
+/* Make the navbar items appear in one strip with some nice color */
+.navbar {
+  background-color: #2980b9; /* Blue color for navbar background */
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 15px 0;
+}
+
+.navbar ul li a:hover {
+  background-color: #f39c12;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+}

@@ -1,233 +1,381 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #87ceeb;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  color: black;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #2980b9; /* Blue color for navbar background */
+  padding: 15px 0;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  font-weight: bold;
+}
+
+.navbar ul li {
+  margin-left: 20px;
+  position: relative;
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease, transform 0.3s ease; /* Add transition for color and scaling */
+}
+
+.navbar ul li a:hover {
+  color: #f39c12; /* Hover effect color */
+  transform: scale(1.1); /* Slightly enlarge the text on hover */
+}
+
+.navbar ul li:hover {
+  transform: scale(1.1); /* Slightly enlarge the entire navbar item */
+}
+
+/* Hero Section */
+.hero {
+  background-color: #0066c;
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.hero h2 {
+  font-size: 36px;
+  transition: transform 0.3s ease;
+}
+
+.hero p {
+  font-size: 18px;
+  margin: 20px 0;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.cta-btn {
+  background-color: red;
+  padding: 12px 30px;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #e68a00;
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Section Styles */
+.section {
+  padding: 60px 0;
+  background-color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.section .container {
+  text-align: center;
+}
+
+.section p {
+  font-size: 18px;
+  color: black;
+}
+
+.section button {
+  padding: 10px 40px;
+  color: whitesmoke;
+  border-radius: 10px;
+  font-weight: bold;
+  border: none;
+  background-color: red;
+  text-decoration-color: #ccc;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.section button:hover {
+  background-color: orange;
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Form Section Styles */
+.form-section {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease;
+}
+
+.form-container {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+  animation: fadeIn 1s ease-out;
+}
+
+h2 {
+  font-size: 28px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+  animation: slideUp 0.5s ease-out;
+}
+
+label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  display: block;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+button.cta-btn {
+  background-color: #3498db;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+}
+
+button.cta-btn:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+button.cta-btn:active {
+  background-color: #1f6d94;
+}
+
+input:focus ~ .cta-btn,
+textarea:focus ~ .cta-btn {
+  transform: scale(1.05); /* Slight animation when focusing on input fields */
+}
+
+/* Animation for header and form */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form-container {
+    padding: 30px;
+    width: 90%;
   }
   
-  body {
-    font-family: 'Arial', sans-serif;
-    background-color: #87ceeb;
+  h2 {
+    font-size: 24px;
   }
-  
-  .container {
-    width: 80%;
-    margin: 0 auto;
+
+  input, textarea, select {
+    font-size: 14px;
   }
-  
-  h1, h2, h3 {
-    color: black;
+
+  button.cta-btn {
+    font-size: 14px;
   }
-  
-  /* Navbar */
-  .navbar {
-    background-color: #0066c;
-    padding: 10px 0;
-    color: white;
-  }
-  
-  .navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .navbar ul {
-    display: flex;
-    list-style: none;
-    font-weight: bold;
-  }
-  
-  .navbar ul li {
-    margin-left: 20px;
-  }
-  
-  .navbar a {
-    color: wite;
-    text-decoration: none;
-    font-size: 16px;
-  }
-  
-  .navbar a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Hero Section */
-  .hero {
-    background-color: #0066c;
-    color: white;
-    padding: 80px 0;
-    text-align: center;
-  }
-  
-  .hero h2 {
-    font-size: 36px;
-  }
-  
-  .hero p {
-    font-size: 18px;
-    margin: 20px 0;
-    color: black;
-  }
-  
-  .cta-btn {
-    background-color: red;
-    padding: 12px 30px;
-    color: white;
-    text-decoration-color: #ccc;
-    font-size: 16px;
-    border-radius: 5px;
-  }
-  
-  .cta-btn:hover {
-    background-color: #e68a00;
-    transform: scale(1.05); /* Slightly enlarge on hover */
-  }
-  
-  /* Section Styles */
-  .section {
-    padding: 60px 0;
-    background-color: #fff;
-  }
-  
-  .section .container {
-    text-align: center;
-  }
-  
-  .section p {
-    font-size: 18px;
-    color: black;
-    
-  }
-  .section button{
-    padding: 10px 40px;
-    color: whitesmoke;
-    border-radius: 10px;
-     font-weight: bold;
-     border: none;
-    background-color: red;
-    text-decoration-color: #ccc;
-  }
-  .btn{
-    text-decoration-color: #f4f4f4;
-  }
-  .btn:hover{
-    background-color: orange;
-    transform: scale(1.05); /* Slightly enlarge on hover */
-  }
-  /* Form Section */
-  .form-section form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .form-section label {
-    margin: 10px 0;
-    font-size: 16px;
-  }
-  
-  .form-section input,
-  .form-section textarea,
-  .form-section select {
-    width: 100%;
-    padding: 12px;
-    margin: 8px 0;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .form-section button {
-    background-color: #0066cc;
-    color: white;
-    padding: 12px 30px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .form-section button:hover {
-    background-color: #005bb5;
-    transform: scale(1.05); /* Slightly enlarge on hover */
-  }
-  
-  /* Technician Profile */
-  /* Profile Section Styling */
+}
+
+
+/* Form Section */
+.form-section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-section label {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.form-section input,
+.form-section textarea,
+.form-section select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-section button {
+  background-color: #0066cc;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.form-section button:hover {
+  background-color: #005bb5;
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Technician Profile */
 #technician-profile {
   padding: 50px 0;
   background-color: #f4f4f4;
 }
-  .profile-card {
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 250px;
-    margin: 0 auto;
-  }
-  /* Profile Picture Styling */
-.profile-pic {
-  width: 100px; /* Set the size of the profile picture */
-  height: 100px;
-  border-radius: 50%; /* Make it circular */
-  object-fit: cover; /* Ensure the image covers the area */
-  margin-bottom: 20px; /* Space between the image and name */
-}
-  
-  .profile-card h3 {
-    font-size: 28px;
-    color: #333;
-  }
-  
-  .profile-card p {
-    font-size: 16px;
-    color: #555;
-  }
 
-  /* Contact Me Button Styling */
+.profile-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 250px;
+  margin: 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for scaling and shadow */
+}
+
+.profile-card:hover {
+  transform: scale(1.05); /* Slightly enlarge the profile card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.profile-card h3 {
+  font-size: 28px;
+  color: #333;
+  transition: transform 0.3s ease;
+}
+
+.profile-card p {
+  font-size: 16px;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+/* Contact Me Button Styling */
 .contact-btn {
   display: inline-block;
-  background-color: #3498db; /* Blue background */
-  color: white; /* White text */
+  background-color: #3498db;
+  color: white;
   padding: 12px 24px;
   font-size: 1.1em;
   text-align: center;
-  border-radius: 30px; /* Rounded corners */
-  margin-top: 15px; /* Space between text and button */
+  border-radius: 30px;
+  margin-top: 15px;
   text-decoration: none;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .contact-btn:hover {
-  background-color: #2980b9; /* Darker blue on hover */
+  background-color: #2980b9;
   transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
 .contact-btn:active {
-  background-color: #1f6d94; /* Even darker blue when clicked */
+  background-color: #1f6d94;
 }
 
 .contact-btn:focus {
-  outline: none; /* Remove focus outline */
+  outline: none;
 }
 
-  
-  /* Footer */
-  footer {
-    background-color: #0066cc;
-    padding: 20px 0;
-    color: white;
-    text-align: center;
-  }
-  
-  footer p {
-    font-size: 14px;
-  }
+/* Footer */
+footer {
+  background-color: #0066cc;
+  padding: 20px 0;
+  color: white;
+  text-align: center;
+}
+
+footer p {
+  font-size: 14px;
+}
+
 /* Logo and Navbar Styling */
 .navbar {
-  background-color: #2a3d4e; /* Dark blue background */
+  background-color: #2a3d4e;
   padding: 15px 0;
   display: flex;
   justify-content: space-between;
@@ -240,9 +388,9 @@
 }
 
 .logo {
-  width: 80px; /* Increased size of the logo */
-  height: 80px; /* Increased size of the logo */
-  margin-right: 10px; /* Space between logo and text */
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
 }
 
 .logo-text {
@@ -272,18 +420,15 @@
   color: #f39c12; /* Hover effect color */
 }
 
-/* Make the navbar items appear in one strip with some nice color */
-.navbar {
-  background-color: #2980b9; /* Blue color for navbar background */
-  color: white;
-  text-transform: uppercase;
-  font-weight: bold;
-  padding: 15px 0;
+.navbar ul li:hover {
+  transform: scale(1.1); /* Slightly enlarge the navbar item on hover */
 }
 
-.navbar ul li a:hover {
-  background-color: #f39c12;
-  color: white;
-  border-radius: 5px;
-  padding: 5px 10px;
+/* Pop-out effect for Home tab */
+.navbar ul li:first-child a {
+  transition: transform 0.3s ease;
+}
+
+.navbar ul li:first-child:hover a {
+  transform: scale(1.1); /* Make the "Home" tab pop out when hovered */
 }

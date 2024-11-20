@@ -1,5 +1,3 @@
-  // script.js
-
 document.addEventListener("DOMContentLoaded", function () {
 
     // Handle form submission for repair requests
@@ -18,13 +16,27 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("Please fill out all fields before submitting.");
         }
     });
-  
+
+    // Smooth Scroll for Internal Links
+    const scrollLinks = document.querySelectorAll("a[href^='#']");
+    scrollLinks.forEach(link => {
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = link.getAttribute("href").substring(1);
+            const targetElement = document.getElementById(targetId);
+            window.scrollTo({
+                top: targetElement.offsetTop - 60, // Offset for sticky navbar
+                behavior: "smooth"
+            });
+        });
+    });
+
     // Handle "Browse Technicians" button click
     const browseTechniciansButton = document.getElementById("browse-technicians");
     browseTechniciansButton.addEventListener("click", function () {
         alert("Redirecting to the list of technicians... (This feature is under development)");
     });
-  
+
     // Handle form submission for contact
     const contactForm = document.getElementById("contact-form");
     contactForm.addEventListener("submit", function (e) {
@@ -41,5 +53,5 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("Please fill out all fields before sending.");
         }
     });
-  
-  });
+
+});

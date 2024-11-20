@@ -50,6 +50,6 @@ to improve our processes and services to meet the evolving needs of the healthca
 Our solutions are designed to be scalable and adaptable, ensuring long-term benefits for
 hospitals of all sizes.
 
-**Join us on our journey to transform healthcare delivery in India through reliable and efficient
-medical equipment maintenance.
-**
+Join us on our journey to transform healthcare delivery in India through reliable and efficient
+medical equipment maintenance.🙏🙏
+
